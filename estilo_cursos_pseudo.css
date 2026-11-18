@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #841088;
+    padding: 0px 40px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+/* Menu de navegação - itens da lista*/
+nav {
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu de navegação - links dos itens*/
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Banner horizontal com foco central */
+.banner {
+    background-image: url('https://www.passagenspromo.com.br/blog/wp-content/uploads/2020/08/o-que-fazer-em-olinda-centro-historico.jpg');
+    background-size: cover;
+    background-position: center 50%;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Centralização do conteúdo abaixo do banner */
+.texto_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 4px;
+    padding: 20;
+    color: rgb(0, 0, 0);
+}
+
+.texto_banner h1 {
+    font-size: 38px;
+    margin-bottom: 36px;
+}
+
+.texto_banner p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    }
+
+
+.bt_Ver_mais {
+    background-color: #841088;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* ---------- Seção SOBRE ---------- */
+.secao_sobre {
+    background-color: #841088;
+    padding: 20px 20px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao_sobre h2 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.secao_sobre p {
+    max-width: 800px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Botão Contratar Agora */
+.bt_contratar {
+    background-color: white
+    color: #000A70;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.bt_contratar:hover {
+    opacity: 0.9;
+}
+
+/* ---------- Seção SERVIÇOS ---------- */
+.secao_cursos {
+    padding: 20px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.secao_cursos h2 {
+    font-size: 20;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.grade_cursos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card_curso {
+    flex: 1;
+    min-width: 220px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_curso img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.card_curso h3 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.card_curso p {
+    font-size: 10px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+
+/* ----- Seção de Fotos (Galeria) -----*/
+
+.secao_fotos {
+    padding: 60px 0 0 0;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.secao_fotos h2 {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.galeria_fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0;
+    width: 100%;
+}
+
+.galeria_fotos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ----- Estrtutura do Rodapé ----- */
+
+footer {
+  background-color: #ffffff;
+  color: #333333;
+  width: 100%;
+}
+
+/* Área de Contato e Sobre a Companhia */
+.rodape_principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  gap: 50px;
+}
+
+/* Estilo da Coluna de Contatos (Esquerda) */
+.coluna_contato {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.coluna_contato p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #444444;
+}
+
+.coluna_contato img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Estilo da Coluna Sobre a Companhia (Direita) */
+.coluna_sobre {
+  flex: 1;
+}
+
+.coluna_sobre h3 {
+  font-size: 1.2rem;
+  color: #222222;
+  margin-bottom: 15px;
+}
+
+.coluna_sobre p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.icones_sociais {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.icones_sociais img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icones_sociais img.icone_maior {
+    width: 18px;
+    height: 18px;
+    align-self: center;
+}
+
+.icones_sociais img:hover {
+  opacity: 0.7;
+  transform: scale(1.1); /* Efeito suave de zoom no ícone ao passar o mouse */
+}
+
+/* Barra Inferior Azul */
+.barra_creditos {
+  background-color: #000A70;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  font-size: 0.85rem;
+}
+
+.barra_creditos a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.barra_creditos a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
