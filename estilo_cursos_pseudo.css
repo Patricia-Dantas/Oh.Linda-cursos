@@ -46,22 +46,42 @@ nav ul li a {
     font-size: 16px;
 }
 
+nav ul li a:hover {
+    color: #f0b9f1;
+    text-decoration: underline;
+}
+
+nav ul li a:focus {
+    color: #f0b9f1;
+    text-decoration: underline;
+    outline: 2px dashed #f0b9f1;
+}
+
 /* Banner horizontal com foco central */
 .banner {
-    background-image: url('https://www.passagenspromo.com.br/blog/wp-content/uploads/2020/08/o-que-fazer-em-olinda-centro-historico.jpg');
-    background-size: cover;
-    background-position: center 50%;
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
     position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://media.istockphoto.com/id/1503385283/pt/foto/olinda-quero-cantar.jpg?s=2048x2048&w=is&k=20&c=7OM76NLG4rslLyq64Rsd99qKKS0dWmMHWBAGnzI3R2A=');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    opacity: 40%;
 }
 
 /* Centralização do conteúdo abaixo do banner */
 .texto_banner {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,22 +89,26 @@ nav ul li a {
     margin: 4px;
     padding: 20;
     color: rgb(0, 0, 0);
+    font: 100% arial, serif;
 }
 
 .texto_banner h1 {
-    font-size: 38px;
-    margin-bottom: 36px;
-}
+    font-size: 50px;
+    margin-bottom: 100px;
+    font-family: 'Montserrat';
+}    
 
 .texto_banner p {
-    font-size: 14px;
+    font-size: 26px;
+    font-weight: bold;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-family: 'Montserrat';
     }
 
 
-.bt_Ver_mais {
-    background-color: #841088;
+.bt_conheca_cursos {
+    background-color: rgb(63, 94, 63);
     color: white;
     padding: 10px 20px;
     font-size: 14px;
@@ -95,78 +119,75 @@ nav ul li a {
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
+.bt_conheca_cursos:hover {
+    opacity: 0.6;
+}
+
 /* ---------- Seção SOBRE ---------- */
 .secao_sobre {
     background-color: #841088;
-    padding: 20px 20px;
-    height: 200px;
+    padding: 10px 10px;
+    height: 240px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Montserrat';
 }
 
 .secao_sobre h2 {
-    font-size: 18px;
+    font-size: 30px;
     color: #FFFFFF;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .secao_sobre p {
-    max-width: 800px;
+    max-width: 1200px;
     line-height: 1.6;
     color: #FFFFFF;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-/* Botão Contratar Agora */
-.bt_contratar {
-    background-color: white
-    color: #000A70;
-    padding: 12px 28px;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
 
-.bt_contratar:hover {
-    opacity: 0.9;
-}
-
-/* ---------- Seção SERVIÇOS ---------- */
+/* ---------- Seção CURSOS! ---------- */
 .secao_cursos {
-    padding: 20px 20px;
-    background-color: #FFFFFF;
+    padding: 60px 10px;
+    background-color: rgb(102, 150, 102);
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .secao_cursos h2 {
-    font-size: 20;
+    font-size: 30px;
     color: #000000;
     margin-bottom: 40px;
 }
 
 .grade_cursos {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .card_curso {
-    flex: 1;
-    min-width: 220px;
-    max-width: 260px;
+    padding:10px;
+    background-color: rgb(243, 175, 243);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Montserrat';
+}
+
+.card_curso:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px
+   rgba(196, 25, 187, 0.911);
+   transition: 0.3s;
 }
 
 .card_curso img {
@@ -174,6 +195,7 @@ nav ul li a {
     height: 60px;
     margin-bottom: 15px;
     object-fit: contain;
+    align-self:center;
 }
 
 .card_curso h3 {
@@ -182,45 +204,88 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
+.card_curso h1 {
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0 10px;
+}
+
 .card_curso p {
-    font-size: 10px;
+    font-size: 16px;
     color: #000000;
     line-height: 1.5;
+    text-align: left;
+    width:100%;
+    padding: 0 10px;    
+}
+
+.card_curso a {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #06612f;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+.card_curso a:hover {
+    color: #01290b;
+    text-decoration: underline;
+}
+
+.card_curso a:focus {
+    color: #520453;
+    text-decoration: underline;
+    outline: 2px dashed #520453;
 }
 
 
 /* ----- Seção de Fotos (Galeria) -----*/
 
 .secao_fotos {
-    padding: 60px 0 0 0;
-    background-color: #FFFFFF;
+    padding: 60px 10px;
+    background-color: #841088;
     text-align: center;
 }
 
 .secao_fotos h2 {
-    font-size: 26px;
-    color: #000000;
-    margin-bottom: 30px;
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
 .galeria_fotos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:0;
-    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .galeria_fotos img {
+    display: block;
     width: 100%;
     height: 220px;
     object-fit: cover;
-    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .galeria_fotos {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ----- Estrtutura do Rodapé ----- */
 
 footer {
-  background-color: #ffffff;
+  background-color: rgb(121, 160, 121);
   color: #333333;
   width: 100%;
 }
@@ -304,7 +369,7 @@ footer {
 
 /* Barra Inferior Azul */
 .barra_creditos {
-  background-color: #000A70;
+  background-color: #841088;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -323,3 +388,4 @@ footer {
   opacity: 0.8;
   text-decoration: underline;
 }
+
